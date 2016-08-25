@@ -59,6 +59,8 @@
           if (!options.appendToBody) {
             $chart.appendChild($toolTip);
           } else {
+            var divtooltip=document.getElementsByClassName('chartist-tooltip');
+            (!divtooltip.length==0) ? divtooltip[0].parentElement.removeChild(divtooltip[0]):false;
             document.body.appendChild($toolTip);
           }
         }
